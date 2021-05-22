@@ -1,47 +1,189 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
-  <title>Survey Module 1 Lab</title>
-</head>
-<body>
-
-  <div id="survey-header">
-    <h1>Survey</h1>
-    <p>Evaluating the UI for <a href="https://medium.com/">Medium</a></p>
-  </div>
-  <div class="surveyFlexContainer">
-    <div class="surveyFlexChild">
-      <img src="image/MediumWebsiteScreenshot.png"  alt="https://medium.com/" width="450" height="300"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script> -->
+    <title>Survey Module 1 Lab</title>
+  </head>
+  <body>
+    <div class="flexed flex-column flex-items-center">
+      <h1>Survey</h1>
+      <p>Evaluating the UI for <a href="https://medium.com/">Medium</a></p>
     </div>
-    <div class="surveyFlexChild">
-       <form id="survey-form">
-        <div>
-          <div>
-            First Name <input type="text" />
-          </div>
-          <div>
-            Last Name <input type="text" />
-          </div>
+    <div class="card">
+      <div class="body flexed flex-content-center flex-wrap">
+        <div class="flexed flex-items-center">
+          <img
+            src="image/MediumWebsiteScreenshot.png"
+            alt="https://medium.com/"
+            width="500"
+            height="400"
+          />
         </div>
         <div>
-          <div>
-            
-          </div>
+          <form>
+            <div style="padding: .5rem;">
+              <div class="flexed flex-content-between padding-25rem">
+                <div>First Name</div>
+                <input class="input-group" type="text" />
+              </div>
+              <div class="flexed flex-content-between padding-25rem">
+                <div>Last Name</div>
+                <input class="input-group" type="text" />
+              </div>
+            </div>
+            <div>
+              <div class="padding-25rem">
+                <h4 class="options-headings">
+                  How often do you use Medium for information
+                </h4>
+                <div>
+                  <div class="flexed flex-column">
+                    <div>
+                      <input
+                        type="radio"
+                        id="veryoften"
+                        name="group1"
+                        value="veryoften"
+                      />
+                      <label for="veryoften">Very often</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="sometimes"
+                        name="group1"
+                        value="sometimes"
+                      />
+                      <label for="sometimes">Sometimes</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="occassionally"
+                        name="group1"
+                        value="occassionally"
+                      />
+                      <label for="occassionally">Occassionally</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="notalot"
+                        name="group1"
+                        value="notalot"
+                      />
+                      <label for="notalot">Not a lot</label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        id="nhoi"
+                        name="group1"
+                        value="nhoi"
+                      />
+                      <label for="nhoi">Never heard of it</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="padding-25rem">
+                <h4 class="options-headings">
+                  What did you find best about Medium
+                </h4>
+                <div>
+                  <div class="flexed flex-column">
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="ease"
+                        name="group2"
+                        value="ease"
+                      />
+                      <label for="ease">Ease of use</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="interface"
+                        name="group2"
+                        value="interface"
+                      />
+                      <label for="interface">Interface design</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="features"
+                        name="group2"
+                        value="features"
+                      />
+                      <label for="features">Features provided</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="quality"
+                        name="group2"
+                        value="quality"
+                      />
+                      <label for="quality">Quality of the output</label>
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        id="other"
+                        name="group2"
+                        value="other"
+                      />
+                      <label for="other">Other</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="padding-25rem">
+              <div>What have you used Medium for:</div>
+              <select class="mb-3" aria-label="Medium Selection Dropdown">
+                <option selected>Design</option>
+                <option value="1">Education</option>
+                <option value="2">Writing</option>
+                <option value="3">Technology</option>
+                <option value="4">Social Media</option>
+              </select>
+            </div>
+            <div class="padding-25rem">
+              <div class="options-headings">Additional Comments</div>
+              <textarea
+                name="comments"
+                class="input-group"
+                id="comments"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <div class="padding-25rem">
+              <button type="button">Submit the Survey</button>
+            </div>
+          </form>
         </div>
-        <div>
-          <textarea name="comments" id="comments" cols="30" rows="10" placeholder="Comments"></textarea>
-        </div>
-      </form>
+      </div>
     </div>
-  </div>
-  <footer>
-    <div>
-      Website designed by 'Some Unknown Creator'
-    </div>
-  </footer>
-  <script src="main.js" defer></script>
-</body>
+    <footer class="flexed flex-content-center p-3 alert-info">
+      <div class="fw-bold">Website designed by 'Some Unknown Creator'</div>
+    </footer>
+    <script src="main.js" defer></script>
+  </body>
 </html>
