@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+#cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  color: white;
+  align-items: center;
+}
+
+#cartView {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  font-family: 'VT323', monospace;
+}
+
+#receipt {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 5px 5px 5px 5px gainsboro;
+  border-radius: 10px;
+}
+
+#receipt > div {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+#receiptHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: lightslategrey;
+  margin: 0 10px;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1.2;
+  color: white;
+}
+
+#receiptBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 3px dashed black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  margin: 0 10px;
+  padding: 5px 10px;
+}
+
+#receiptFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  margin: 0 10px;
+  border-bottom: 3px dashed black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+}
+
+#customer {
+  padding: 20px;
+}
+
+#customer-disclaimer {
+  margin-top: 10px;
+  color: darkslategray;
+  font-weight: bold;
+}
+
+#filtering {
+  display: flex;
+}
+
+#filtering > div {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+#filtering > select {
+  padding: 2px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 15px;
+}
+
+#organicFiltering {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #b6effb;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 2px 5px 5px #b6effb;
+}
+
+#productView {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.activated {
+  border-bottom: 2px solid #cff4fc;
+  background-color: cadetblue;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 10px;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.addBtn {
+  background-color: steelblue;
+}
+
+.addBtn:hover {
+  background-color: rgb(74, 151, 214);
+  box-shadow: 2px 2px 2px grey;
+}
+
+.added {
+  background-color: rgb(74, 151, 214);
+  box-shadow: 2px 2px 2px grey;
+  
+}
+
+.added:hover {
+  background-color: steelblue;
+  box-shadow: none;
+}
+
+.in-view {
+  display: block;
+}
+
+.out-view {
+  display: none !important;
+}
+
+.listitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 3px solid #b6effb;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.receiptListItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.itemTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  background-color: darkcyan;
+  padding: 10px;
+}
+
+footer {
+  color: #055160;
+  background-color: #cff4fc;
+  border-color: #b6effb;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 350px;
+  margin-right: auto;
+}
+
+nav > div {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 10px;
+  transition: background ease-in-out 250ms;
+}
+
+nav > div:hover {
+  background-color: cadetblue;
+}

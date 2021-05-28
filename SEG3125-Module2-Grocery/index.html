@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Module 2 Grocery Store</title>
+</head>
+<body>
+
+  <header>
+    <nav id="nav">
+      <div class="activated" id="profile" onclick="navigateTopLevel('profile', 'customer')">Customer Profile</div>
+      <div id="products" onclick="navigateTopLevel('products', 'productView');populateProductFields()">Products</div>
+      <div id="cart" onclick="navigateTopLevel('cart', 'cartView');createReceiptBody();createReceiptFooter()"><div id="cartNumbers"></div> Cart</div>
+    </nav>
+    <div id="title">Critical Choice Groceries</div>
+  </header>
+  
+  <main>
+    <div class="in-view" id="customer">
+      <div id="filtering">
+        <div>Filter by Category</div>
+        <select id="selectOptions" onchange="profileDropdownChange()">
+          <option>None</option>
+          <option>Lactose free</option>
+          <option>Nut free</option>
+          <option>Lactose free and nut free</option>
+        </select>
+      </div>
+      <div id="organicFiltering">
+        <div>Filter by Organic</div>
+        <div>
+          <div id="organicRadio"><input type="radio" id="organic" name="group1" value="Organic" checked onclick="organicSwitcher(true)"/> Organic</div>
+          <div id="nonorganicRadio"><input type="radio" id="nonorganic" name="group1" value="Non-Organic" onclick="organicSwitcher(false)"/> Non-Organic</div>
+        </div>
+      </div>
+      <div id="customer-disclaimer">
+        All changes are saved automatically
+      </div>
+    </div>
+    <div class="out-view" id="productView"></div>
+    <div class="out-view" id="cartView">
+      <div id="receipt">
+        <div>
+          Critical Choice Groceries
+        </div>
+        <hr style="margin: 0 10px;"/>
+        <div id="receiptHeader">
+          <div>Item Name</div>
+          <div>Price</div>
+        </div>
+        <div id="receiptBody"></div>
+        <div id="receiptFooter"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>Website designed by 'Some Unknown Creator'</div>
+  </footer>
+
+  <script src="scripts/grocery.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
