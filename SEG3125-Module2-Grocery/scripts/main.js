@@ -85,6 +85,12 @@ function populateProductFields() {
     imgTitleDiv.appendChild(img);
     imgTitleDiv.appendChild(titleDiv);
 
+    const leftDiv = document.createElement("div");
+    leftDiv.classList.add("leftDiv");
+
+    const priceDiv = document.createElement("div");
+    priceDiv.innerText = `$ ${element.price.toFixed(2)}`;
+
     const addButton = document.createElement("button");
     addButton.id = index;
     addButton.classList.add("btn");
@@ -108,8 +114,11 @@ function populateProductFields() {
       };
     }
 
+    leftDiv.appendChild(priceDiv);
+    leftDiv.appendChild(addButton);
+
     listItemDiv.appendChild(imgTitleDiv);
-    listItemDiv.appendChild(addButton);
+    listItemDiv.appendChild(leftDiv);
 
     productDiv.appendChild(listItemDiv);
   }

@@ -161,6 +161,13 @@
   display: none !important;
 }
 
+.leftDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 250px;
+}
+
 .listitem {
   display: flex;
   flex-direction: row;
