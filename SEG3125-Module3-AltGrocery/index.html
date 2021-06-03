@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Module 2 Grocery Store</title>
+  </head>
+  <body>
+    <header>
+      <div id="title">Critical Choice Groceries</div>
+    </header>
+
+    <main>
+      <div class="in-view" id="customer">
+        <div id="filterBody">
+          <div id="filtering">
+            <div>
+              <div>Filter by Category</div>
+              <select id="selectOptions" onchange="profileDropdownChange()">
+                <option>None</option>
+                <option>Lactose free</option>
+                <option>Nut free</option>
+                <option>Lactose free and nut free</option>
+              </select>
+            </div>
+          </div>
+          <div id="organicFiltering">
+            <div>Filter by Organic</div>
+            <div>
+              <div id="organicRadio">
+                <input
+                  type="radio"
+                  id="organic"
+                  name="group1"
+                  value="Organic"
+                  checked
+                  onclick="organicSwitcher(true)"
+                />
+                Organic
+              </div>
+              <div id="nonorganicRadio">
+                <input
+                  type="radio"
+                  id="nonorganic"
+                  name="group1"
+                  value="Non-Organic"
+                  onclick="organicSwitcher(false)"
+                />
+                Non-Organic
+              </div>
+            </div>
+          </div>
+          <div id="customer-disclaimer">
+            All changes are saved automatically
+          </div>
+        </div>
+        <div class="side-nav">
+          <div
+            class="nav-item left"
+            onclick="navigateTopLevel('productView');populateProductFields()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+            Go To Products
+          </div>
+        </div>
+      </div>
+      <div class="out-view" id="productView">
+        <div class="side-nav">
+          <div class="nav-item left" onclick="navigateTopLevel('customer')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+            Go To Profile
+          </div>
+          <div
+            class="nav-item right"
+            onclick="navigateTopLevel('cartView');createReceiptBody();createReceiptFooter()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+            Go To Cart
+          </div>
+        </div>
+        <div id="productBody"></div>
+        <div class="side-nav">
+          <div class="nav-item left" onclick="navigateTopLevel('customer')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+            Go To Profile
+          </div>
+          <div
+            class="nav-item right"
+            onclick="navigateTopLevel('cartView');createReceiptBody();createReceiptFooter()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+            Go To Cart
+          </div>
+        </div>
+      </div>
+      <div class="out-view" id="cartView">
+        <div class="side-nav">
+          <div class="nav-item left" onclick="navigateTopLevel('productView')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-left"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+              />
+            </svg>
+            Go To Products
+          </div>
+          <div class="nav-item right" onclick="showCheckoutModal()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+              />
+            </svg>
+            Proceed to Checkout
+          </div>
+        </div>
+        <div id="receipt">
+          <div>Critical Choice Groceries</div>
+          <hr style="margin: 0 10px" />
+          <div id="receiptHeader">
+            <div>Item Name</div>
+            <div>Price</div>
+          </div>
+          <div id="receiptBody"></div>
+          <div id="receiptFooter"></div>
+        </div>
+      </div>
+    </main>
+
+    <div id="checkoutModal" class="modal">
+      <div class="modal-body">
+        <div class="header">
+          <span class="close" onclick="closeCheckout()">&times;</span>
+          <h2>Checkout Panel</h2>
+        </div>
+        <div class="body">
+          <div id="checkoutOptions">
+            <div
+              class="nav-item checkoutOptions"
+              id="pick-up"
+              onclick="selectCheckoutOptions('pick-up')"
+            >
+              Pick-up
+            </div>
+            <div
+              class="nav-item checkoutOptions"
+              id="drop-off"
+              onclick="selectCheckoutOptions('drop-off')"
+            >
+              Drop-off
+            </div>
+          </div>
+          <div id="paymentInfo">
+            <div id="cardName">
+              <div>Enter Card Holder Name</div>
+              <input type="text" />
+            </div>
+            <div id="cardInfo">
+              <div>Enter Card Number + CVV</div>
+              <input type="text" />
+              <input type="text" style="width: 35px" />
+            </div>
+            <div>
+              <button id="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          Thank you for shopping at <strong>Critical Choice Groceries</strong>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>Website designed by 'Some Unknown Creator'</div>
+    </footer>
+
+    <script src="scripts/grocery.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
