@@ -13,8 +13,6 @@ function navigateTopLevel(view) {
       viewChildren.item(index).classList.add("in-view");
     }
   }
-
-
 }
 
 function showCheckoutModal() {
@@ -23,37 +21,67 @@ function showCheckoutModal() {
 
 function closeCheckout() {
   document.getElementById("checkoutModal").style.display = "none";
+  document.getElementById("confirmScreen").remove();
+  document.getElementById("checkoutOptions").style.display = "flex";
+  document.getElementById("paymentInfo").style.display = "block";
 }
 
-/**
- * 
- * @param {String} attr 
- * @param {number} index 
- */
-function selectCheckoutOptions(attr) {
-  document.getElementById('pick-up').classList.remove('selected');
-  document.getElementById('drop-off').classList.remove('selected');
+function finalCheckout() {
+  const checkoutBody = document.getElementById("checkoutBody");
 
-  document.getElementById(attr).classList.add('selected');
+  for (let i = 0; i < checkoutBody.children.length; i++) {
+    checkoutBody.children.item(i).style.display = "none";
+  }
+
+  const confirmScreen = document.createElement("div");
+  confirmScreen.id = "confirmScreen";
+  confirmScreen.append("Order is confirmed");
+
+  checkoutBody.appendChild(confirmScreen);
 }
 
 /**
  *
+ * @param {String} attr
+ * @param {number} index
  */
-function profileDropdownChange() {
-  const select = document.getElementById("selectOptions").value;
-  if (select === "None") {
+function selectCheckoutOptions(attr) {
+  document.getElementById("pick-up").classList.remove("selected");
+  document.getElementById("drop-off").classList.remove("selected");
+
+  document.getElementById(attr).classList.add("selected");
+}
+
+/**
+ *
+ * @param {String} value
+ */
+function categorySwitcher(value) {
+  if (value === "none" && document.getElementById(value).checked) {
     lactose = true;
     nut = true;
-  } else if (select === "Lactose free") {
+    document.getElementById("lactose").checked = false;
+    document.getElementById("nut").checked = false;
+  } else if (value === "none" && !document.getElementById(value).checked) {
     lactose = false;
-    nut = true;
-  } else if (select === "Nut free") {
+    nut = false;
+    document.getElementById("lactose").checked = true;
+    document.getElementById("nut").checked = true;
+  } else if (value === "lactose" && document.getElementById(value).checked) {
+    lactose = false;
+    document.getElementById("none").checked = false;
+  } else if (value === "lactose" && !document.getElementById(value).checked) {
     lactose = true;
+  } else if (value === "nut" && document.getElementById(value).checked) {
     nut = false;
-  } else {
-    lactose = false;
-    nut = false;
+    document.getElementById("none").checked = false;
+  } else if (value === "nut" && !document.getElementById(value).checked) {
+    nut = true;
+  }
+
+  // Cleanup
+  if (lactose && nut) {
+    document.getElementById("none").checked = true;
   }
 }
 
@@ -68,7 +96,6 @@ function organicSwitcher(value) {
 function populateProductFields() {
   const productDiv = document.getElementById("productBody");
   const productsHere = filterProducts();
-
   while (productDiv.firstChild) {
     productDiv.removeChild(productDiv.firstChild);
   }
@@ -101,31 +128,23 @@ function populateProductFields() {
     const priceDiv = document.createElement("div");
     priceDiv.innerText = `$ ${element.price.toFixed(2)}`;
 
-    const addButton = document.createElement("button");
-    addButton.id = index;
-    addButton.classList.add("btn");
+    const checkBox = document.createElement("input");
+    checkBox.id = index;
+    checkBox.type = "checkbox";
     if (cart.indexOf(element) === -1) {
-      addButton.classList.add("addBtn");
-      addButton.innerText = "Add To Cart";
-      addButton.onclick = () => {
-        addToCart(element, index);
-      };
+      checkBox.classList.add("addBtn");
     } else {
-      addButton.classList.add("added");
-      addButton.innerText = "Added to cart";
-      addButton.onmouseenter = () => {
-        addButton.innerText = "Remove From Cart";
-      };
-      addButton.onmouseleave = () => {
-        addButton.innerText = "Added to cart";
-      };
-      addButton.onclick = () => {
-        removeFromCart(element, index);
-      };
+      checkBox.checked = true;
+      checkBox.classList.add("added");
     }
+    checkBox.onchange = () => {
+      checkBox.checked
+        ? addToCart(element, index)
+        : removeFromCart(element, index);
+    };
 
     leftDiv.appendChild(priceDiv);
-    leftDiv.appendChild(addButton);
+    leftDiv.appendChild(checkBox);
 
     listItemDiv.appendChild(imgTitleDiv);
     listItemDiv.appendChild(leftDiv);
@@ -143,18 +162,9 @@ function addToCart(product, btnId) {
   cart = [...cart, product];
   const btn = document.getElementById(btnId);
   btn.classList.add("added");
-  btn.innerText = "Added to cart";
-  btn.onmouseenter = () => {
-    btn.innerText = "Remove From Cart";
+  btn.onchange = () => {
+    !btn.checked ? removeFromCart(product, btnId) : addToCart(product, btnId);
   };
-  btn.onmouseleave = () => {
-    btn.innerText = "Added to cart";
-  };
-  btn.onclick = () => {
-    removeFromCart(product, btnId);
-  };
-
-  document.getElementById("cartNumbers").innerText = `(${cart.length})`;
 }
 
 /**
@@ -167,30 +177,25 @@ function removeFromCart(product, btnId) {
   btn.classList.remove("added");
   btn.classList.add("addBtn");
   btn.innerText = "Add To Cart";
-  btn.onclick = () => {
-    addToCart(product, btnId);
+  btn.onchange = () => {
+    btn.checked ? removeFromCart(product, btnId) : addToCart(product, btnId);
   };
-  btn.onmouseenter = () => {};
-  btn.onmouseleave = () => {};
 
   cart = cart.filter((value, index) => {
     if (value.name !== product.name) {
       return true;
     }
   });
-
-  document.getElementById("cartNumbers").innerText = `(${cart.length})`;``
 }
-
 
 function createReceiptBody() {
   const body = document.getElementById("receiptBody");
 
-  while(body.firstChild) {
+  while (body.firstChild) {
     body.removeChild(body.firstChild);
   }
 
-  for(let index = 0; index < cart.length; index++) {
+  for (let index = 0; index < cart.length; index++) {
     const element = cart[index];
 
     const listItem = document.createElement("div");
@@ -200,7 +205,7 @@ function createReceiptBody() {
     divName.innerText = element.name;
 
     const divPrice = document.createElement("div");
-    divPrice.innerText = `$ ${element.price.toFixed(2)}`
+    divPrice.innerText = `$ ${element.price.toFixed(2)}`;
 
     listItem.appendChild(divName);
     listItem.appendChild(divPrice);
@@ -211,7 +216,7 @@ function createReceiptBody() {
 
 function createReceiptFooter() {
   const footer = document.getElementById("receiptFooter");
-  while(footer.firstChild) {
+  while (footer.firstChild) {
     footer.removeChild(footer.firstChild);
   }
   const totalP = document.createElement("div");

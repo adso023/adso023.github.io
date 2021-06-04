@@ -246,6 +246,11 @@ function filterProducts() {
   if (! nut) {
     productsHere = productsHere.filter((value) => ! value.nuts);
   }
+
+  productsHere.sort((a, b) => {
+    return a.price > b.price;
+  })
+
   return productsHere;
 }
 

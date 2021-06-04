@@ -90,20 +90,12 @@
 }
 
 #filtering {
-  display: flex;
-}
-
-#filtering > div {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
-
-#filtering > div > select {
-  padding: 2px;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 15px;
-  margin-left: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #b6effb;
+  border-radius: 5px;
+  width: 300px;
+  box-shadow: 2px 5px 5px #b6effb;
 }
 
 #organicFiltering {
@@ -191,17 +183,17 @@
 }
 
 .addBtn {
-  background-color: steelblue;
+  width: 50px;
+  height: 50px;
 }
 
 .addBtn:hover {
   background-color: rgb(74, 151, 214);
-  box-shadow: 2px 2px 2px grey;
+  box-shadow: 2px 2px 10px grey;
 }
 
 .added {
-  background-color: rgb(74, 151, 214);
-  box-shadow: 2px 2px 2px grey;
+  box-shadow: 2px 2px 10px grey;
 }
 
 .added:hover {
@@ -316,7 +308,7 @@
 .modal-body {
   background-color: white;
   margin: 15% auto;
-  width: 80%;
+  width: 500px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
   animation-duration: 0.4s;

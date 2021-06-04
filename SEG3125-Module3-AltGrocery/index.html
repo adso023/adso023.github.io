@@ -16,14 +16,36 @@
       <div class="in-view" id="customer">
         <div id="filterBody">
           <div id="filtering">
+            <div>Category Filter</div>
             <div>
-              <div>Filter by Category</div>
-              <select id="selectOptions" onchange="profileDropdownChange()">
-                <option>None</option>
-                <option>Lactose free</option>
-                <option>Nut free</option>
-                <option>Lactose free and nut free</option>
-              </select>
+              <div id="noneCheckBox">
+                <input
+                  type="checkbox"
+                  id="none"
+                  value="none"
+                  checked
+                  onclick="categorySwitcher(this.value)"
+                />
+                None
+              </div>
+              <div id="lactoseCheckBox">
+                <input
+                  type="checkbox"
+                  id="lactose"
+                  value="lactose"
+                  onclick="categorySwitcher(this.value)"
+                />
+                Lactose Intolerant
+              </div>
+              <div id="nutCheckBox">
+                <input
+                  type="checkbox"
+                  id="nut"
+                  value="nut"
+                  onclick="categorySwitcher(this.value)"
+                />
+                Nut Free
+              </div>
             </div>
           </div>
           <div id="organicFiltering">
@@ -209,7 +231,7 @@
           <span class="close" onclick="closeCheckout()">&times;</span>
           <h2>Checkout Panel</h2>
         </div>
-        <div class="body">
+        <div id="checkoutBody" class="body">
           <div id="checkoutOptions">
             <div
               class="nav-item checkoutOptions"
@@ -237,7 +259,7 @@
               <input type="text" style="width: 35px" />
             </div>
             <div>
-              <button id="submit">Submit</button>
+              <button id="submit" onclick="finalCheckout()">Submit</button>
             </div>
           </div>
         </div>
