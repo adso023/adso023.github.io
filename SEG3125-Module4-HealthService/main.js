@@ -1,106 +1,119 @@
 /**
- *
- * @param {String} id
+ * 
+ * @param {String} id 
  */
-function updateAppointmentViaDropdown(id) {
-  const dd = document.getElementsByClassName("dd-service");
-
-  for (var item of dd) {
-    item.classList.remove("active");
+function selectService(id) {
+  const dropdownItems = document.getElementsByClassName('dd-service');
+  for(var item of dropdownItems) {
+    item.classList.remove('active');
   }
 
-  if (id !== "dropdown-item-clear") {
-    const ddItem = document.getElementById(id);
-    ddItem.classList.add("active");
+  const title = document.getElementById(id);
+  title.classList.add('active');
 
-    document.getElementById("dropdownMenuServices").innerText =
-      ddItem.innerText;
-
-    userAppointmentDetails.service = ddItem.innerText;
-  } else {
-    document.getElementById("dropdownMenuServices").innerText =
-      "Select Service";
-    userAppointmentDetails.service = "Select Service";
-  }
+  document.getElementById('dropdownService').innerText = title.innerText;
 }
 
-function updateAppointmentDateTime(id) {
-  const datetime = document.getElementById(id);
-
-  if (id === "appDate") {
-    userAppointmentDetails.date = datetime.value;
-  } else if (id === "appTime") {
-    userAppointmentDetails.date = datetime.value;
-  } else {
-    console.error("Invalid id for this function");
+/**
+ * 
+ * @param {String} id 
+ */
+function selectMonth(id) {
+  const dropdownItems = document.getElementsByClassName('month');
+  for(var item of dropdownItems) {
+    item.classList.remove('active');
   }
+
+  const month = document.getElementById(id);
+  
+  document.getElementById('dropdownMonth').innerText = month.innerText;
+}
+
+/**
+ * 
+ * @param {String} id 
+ */
+function selectDay(id) {
+  const dropdownItems = document.getElementsByClassName('day');
+  for(var item of dropdownItems) {
+    item.classList.remove('active');
+  }
+
+  const day = document.getElementById(id);
+
+  document.getElementById('dropdownDay').innerText = day.innerText;
+}
+
+/**
+ * 
+ * @param {String} id 
+ */
+function selectYear(id) {
+  const dropdownYear = document.getElementsByClassName('year');
+  for(var item of dropdownYear) {
+    item.classList.remove('active');
+  }
+
+  const year = document.getElementById(id);
+  
+  document.getElementById('dropdownYear').innerText = year.innerText;
+}
+
+/**
+ * 
+ * @param {String} id 
+ */
+function selectTime(id) {
+  const dropdownItems = document.getElementsByClassName('time');
+  for(var item of dropdownItems) {
+    item.classList.remove('active');
+  }
+
+  const time = document.getElementById(id);
+
+  document.getElementById('dropdownTime').innerText = time.innerText;
 }
 
 function submitAppointment() {
-  const name = document.getElementById("contactName").value;
-  const phone = document.getElementById("contactPhone").value;
-  const email = document.getElementById("contactEmail").value;
-
-  userAppointmentDetails.name = name;
-  userAppointmentDetails.phone = phone;
-  userAppointmentDetails.email = email;
-
-  currentAppointments = [...currentAppointments, userAppointmentDetails];
-
-  resetFields();
-  updateTable();
+  var snackbar = document.getElementById('snackbar');
+  snackbar.classList.add('show');
+  setTimeout(() => {
+    snackbar.classList.remove('show');
+  }, 3000);
 }
 
-function resetFields() {
-  updateAppointmentViaDropdown("dropdown-item-clear");
-  document.getElementById("appDate").value = "";
-  document.getElementById("appTime").value = "";
-  document.getElementById("contactName").value = "";
-  document.getElementById("contactPhone").value = "";
-  document.getElementById("contactEmail").value = "";
-
-  userAppointmentDetails = {
-    service: "Select-Service",
-    date: "mm/dd/yyyy",
-    time: "--:-- --",
-    name: "",
-    phone: "--- --- ----",
-    email: "",
-  };
-}
-
-function updateTable() {
-  const tBody = document.getElementById("table-body");
-
-  while (tBody.firstChild) {
-    tBody.removeChild(tBody.firstChild);
+function reset() {
+  const dropdownServices = document.getElementsByClassName('dd-service');
+  for(var service of dropdownServices) {
+    service.classList.remove('active');
   }
+  document.getElementById('dropdownService').innerText = 'Select Services';
 
-  let flag = 0;
-  for (var app of currentAppointments) {
-    const tr = document.createElement("tr");
-
-    const td1 = document.createElement("td");
-    td1.innerText = flag + 1;
-
-    const td2 = document.createElement("td");
-    td2.innerText = app.name;
-
-    const td3 = document.createElement("td");
-    td3.innerText = app.phone;
-
-    const td4 = document.createElement("td");
-    td4.innerText = app.email;
-
-    const td5 = document.createElement("td");
-    td5.innerText = app.service;
-
-    const td6 = document.createElement("td");
-    td6.innerText = `${app.date} ${app.time}`;
-
-    tr.append(td1, td2, td3, td4, td5, td6);
-    tBody.append(tr);
-
-    flag++;
+  const dropdownMonth = document.getElementsByClassName('month');
+  for(var month of dropdownMonth) {
+    month.classList.remove('active');
   }
+  document.getElementById('dropdownMonth').innerText = 'Month';
+
+  const dropdownDay = document.getElementsByClassName('day');
+  for(var day of dropdownDay) {
+    day.classList.remove('active');
+  }
+  document.getElementById('dropdownDay').innerText = 'Day';
+
+  const dropdownYear = document.getElementsByClassName('year');
+  for(var year of dropdownYear) {
+    year.classList.remove('year');
+  }
+  document.getElementById('dropdownYear').innerText = 'Year';
+
+  const dropdownTime = document.getElementsByClassName('time');
+  for(var time of dropdownTime) {
+    time.classList.remove('active');
+  }
+  document.getElementById('dropdownTime').innerText = 'Time';
+
+  document.getElementById('floatingName').value = '';
+  document.getElementById('floatingEmail').value = '';
+  document.getElementById('floatingPhone').value = '';
 }

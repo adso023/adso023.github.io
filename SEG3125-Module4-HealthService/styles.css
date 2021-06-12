@@ -1,5 +1,5 @@
 /* Ids */
-#about {
+/* #about {
   animation: 1s ease-in-out 0s 1 leftSlideAboutSection;
 }
 
@@ -13,27 +13,76 @@
 
 #logo-image {
   box-shadow: 8px -1px 17px black, -8px 1px 12px black !important;
-}
+} */
 
 /* Classes */
-.mc-height {
+/* .mc-height {
   height: max-content;
 }
 
 .right-anim {
   animation: 1s ease-in-out 0s 1 rightSlideAppointmentSection;
-}
+} */
 
 .service-price::before {
   content: "$";
+}
+
+.banner {
+  border-width: 2px !important;
 }
 
 .noto-sans {
   font-family: "Noto Sans", sans-serif;
 }
 
+.pe-auto {
+  cursor: pointer !important;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: fit-content;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s fadeout 0.5s 2.5s;
+  animation: fadein 0.5s fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
 /* Elements */
-header {
+/* header {
   animation: 1s ease-in-out 0s 1 downSlideHeader;
 }
 
@@ -52,10 +101,10 @@ input[type="time"] {
   outline: none;
   border: 1px solid #212529;
   color: white;
-}
+} */
 
 /* Animations */
-@keyframes downSlideHeader {
+/* @keyframes downSlideHeader {
   0% {
     transform: translateY(-100%);
   }
@@ -89,4 +138,4 @@ input[type="time"] {
   100% {
     transform: translateX(0);
   }
-}
+} */
