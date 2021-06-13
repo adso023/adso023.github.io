@@ -77,6 +77,7 @@ function selectTime(id) {
 function submitAppointment() {
   var snackbar = document.getElementById('snackbar');
   snackbar.classList.add('show');
+  reset();
   setTimeout(() => {
     snackbar.classList.remove('show');
   }, 3000);
