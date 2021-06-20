@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Module 4 Health Service</title>
+  </head>
+  <body>
+    <header class="noto-sans sticky-top bg-white">
+      <nav
+        id="navbar-nav"
+        class="navbar shadow rounded p-3 mx-3 d-flex justify-content-around"
+      >
+        <div class="d-flex">
+          <img
+            src="images/medical-logo-design.jpeg"
+            alt="Clinic Logo"
+            width="75"
+            height="75"
+          />
+          <div class="d-flex align-items-center text-success fw-bolder fs-3">
+            Lorem Ipsum Physiotherapy
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <div
+            class="
+              d-flex
+              align-items-center
+              fw-bold
+              pe-auto
+              border-end
+              mx-2
+              pe-2
+            "
+          >
+            <a class="text-decoration-none text-primary" href="#services"
+              >Services</a
+            >
+          </div>
+          <div
+            class="
+              d-flex
+              align-items-center
+              fw-bold
+              pe-auto
+              border-end
+              mx-2
+              pe-2
+            "
+          >
+            <a class="text-decoration-none text-dark" href="#experts"
+              >Experts</a
+            >
+          </div>
+          <div class="d-flex align-items-center fw-bold pe-auto mx-2 pe-2">
+            <a class="text-decoration-none text-danger" href="#about-us"
+              >About Us</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main
+      class="m-3"
+      data-bs-spy="scroll"
+      data-bs-target="navbar-nav"
+      data-bs-offset="0"
+    >
+      <section class="border-bottom border-start border-end" id="services">
+        <div
+          class="
+            banner
+            d-flex
+            justify-content-between
+            p-3
+            border-top border-start border-end border-primary
+            bg-light
+          "
+        >
+          <div class="d-flex align-items-center fs-5 fw-bold">
+            <div class="d-flex justify-content-between gap-2">
+              <div id="serviceHeading">Services</div>
+              <div class="d-flex align-items-center">
+                <i
+                  class="bi bi-question-circle"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="Click on the buttons for descriptions"
+                ></i>
+              </div>
+            </div>
+          </div>
+          <button
+            class="d-flex gap-2 btn btn-primary p-1 text-decoration-none"
+            type="button"
+            data-bs-toggle="modal"
+            data-bs-target="#appointmentModal"
+          >
+            <i class="bi bi-calendar-plus-fill"></i>
+            <div>
+              <div class="text-white">Book Appointment</div>
+            </div>
+          </button>
+        </div>
+        <div class="container mt-2 pb-1 pt-1">
+          <div
+            class="
+              row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xxl-6
+              g-4
+            "
+          >
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="images/acupuncture.jpg"
+                  class="card-img-top"
+                  width="354"
+                  height="235"
+                  alt="Acupuncture"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <div
+                      class="btn btn-outline-dark w-100"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service1"
+                      aria-expanded="false"
+                      aria-controls="service1"
+                    >
+                      Acupuncture <span class="service-price">90</span>
+                    </div>
+                  </h5>
+                  <div class="card-text collapse" id="service1">
+                    Acupuncture seeks to restore the flow of positive energy
+                    throughout your body. It also claims to remove negative
+                    energy that is causing you pain.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="images/inversiontherapy.jpg"
+                  class="card-img-top"
+                  width="354"
+                  height="235"
+                  alt="Acupuncture"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <div
+                      class="btn btn-outline-dark w-100"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service2"
+                      aria-expanded="false"
+                      aria-controls="service2"
+                    >
+                      Inversion Therapy <span class="service-price">120</span>
+                    </div>
+                  </h5>
+                  <div class="card-text collapse" id="service2">
+                    Inversion therapy, is the process of seeking therapeutic
+                    benefits from hanging by the legs, ankles, or feet in an
+                    inverted angle or entirely upside down. It is a form of
+                    spinal traction
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="images/massagetherapy.jpg"
+                  class="card-img-top"
+                  width="354"
+                  height="235"
+                  alt="Acupuncture"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <div
+                      class="btn btn-outline-dark w-100"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service3"
+                      aria-expanded="false"
+                      aria-controls="service3"
+                    >
+                      Massage and Soft Tissue Therapy
+                      <span class="service-price">130</span>
+                    </div>
+                  </h5>
+                  <div class="card-text collapse" id="service3">
+                    Soft tissue massage is the best option for targeting
+                    injuries in the muscles, tendons, and ligaments. Depth of
+                    massage depends on type of injury
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="images/vibrationtherapy.png"
+                  class="card-img-top"
+                  width="354"
+                  height="235"
+                  alt="Acupuncture"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <div
+                      class="btn btn-outline-dark w-100"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service4"
+                      aria-expanded="false"
+                      aria-controls="service4"
+                    >
+                      Whole Body Vibration Therapy
+                      <span class="service-price">150</span>
+                    </div>
+                  </h5>
+                  <div class="card-text collapse" id="service4">
+                    Vibration therapy uses vibration as a physical tool during
+                    treatment. Vibration can be applied with different devices,
+                    as local therapy or as a whole body vibration
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="images/electrotherapy.jpg"
+                  class="card-img-top"
+                  width="354"
+                  height="235"
+                  alt="Acupuncture"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <div
+                      class="btn btn-outline-dark w-100"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service5"
+                      aria-expanded="false"
+                      aria-controls="service5"
+                    >
+                      Electrotherapy <span class="service-price">150</span>
+                    </div>
+                  </h5>
+                  <div class="card-text collapse" id="service5">
+                    Healing effect on the body by improving blood circulation.
+                    The treatment stimulates the cells leading to reduced
+                    inflammation in the body, also stimulates muscles tissues
+                    for relaxation
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img
+                  src="images/cupping.jpg"
+                  class="card-img-top"
+                  width="354"
+                  height="235"
+                  alt="Acupuncture"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <div
+                      class="btn btn-outline-dark w-100"
+                      role="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#service6"
+                      aria-expanded="false"
+                      aria-controls="service6"
+                    >
+                      Cupping <span class="service-price">90</span>
+                    </div>
+                  </h5>
+                  <div class="card-text collapse" id="service6">
+                    Cupping therapy is an ancient form of alternative medicine
+                    in which the therapist puts special cups on your skin for a
+                    few minutes to create suction. Helps with pain,
+                    inflammation, blood flow, relaxation and etc
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="border-bottom border-start border-end mt-3" id="experts">
+        <div
+          class="
+            banner
+            d-flex
+            justify-content-between
+            p-3
+            border-top border-start border-end border-dark
+            bg-light
+          "
+        >
+          <div class="d-flex align-items-center gap-2 fs-5 fw-bold">
+            <div>Experts</div>
+            <div class="d-flex align-items-center">
+              <i
+                class="bi bi-question-circle"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="People and Images from randomuser.me and thispersondoesnotexist.com"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-1 pb-1">
+          <div class="row row-cols-sm-2 row-cols-lg-4">
+            <div class="col">
+              <div class="card" style="width: 15rem">
+                <img
+                  src="images/expert1.jpg"
+                  width="354"
+                  height="250"
+                  class="card-img-top"
+                  alt="Expert 1"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <div>Kevin Cox</div>
+                  </h5>
+                  <div class="card-text">Musculoskeletal</div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 15rem">
+                <img
+                  src="images/expert2.jpg"
+                  width="354"
+                  height="250"
+                  class="card-img-top"
+                  alt="Expert 1"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <div>Ted Neal</div>
+                  </h5>
+                  <div class="card-text">Neurosciences</div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 15rem">
+                <img
+                  src="images/expert3.jpg"
+                  width="354"
+                  height="250"
+                  class="card-img-top"
+                  alt="Expert 1"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <div>Alexa Turner</div>
+                  </h5>
+                  <div class="card-text">Massage Therapist</div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card" style="width: 15rem">
+                <img
+                  src="images/expert4.jpg"
+                  width="354"
+                  height="250"
+                  class="card-img-top"
+                  alt="Expert 1"
+                />
+                <div class="card-body text-center">
+                  <h5 class="card-title">
+                    <div>Nellie Murphy</div>
+                  </h5>
+                  <div class="card-text">Pain Science</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="border-bottom border-start border-end mt-3" id="about-us">
+        <div
+          class="
+            banner
+            d-flex
+            justify-content-between
+            p-3
+            border-top border-start border-end border-danger
+            bg-light
+          "
+        >
+          <div class="d-flex align-items-center gap-2 fs-5 fw-bold">
+            <div>Clinic Information</div>
+            <div class="d-flex align-items-center">
+              <i
+                class="bi bi-question-circle"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="This site is not for the real clinic at this location"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-1 pb-1">
+          <div class="row row-cols-sm-1 row-cols-lg-2">
+            <div class="col-sm d-flex justify-content-center">
+              <div class="card h-100" style="width: 18rem">
+                <div class="card-header">Clinic Location</div>
+                <div class="card-body text-center container">
+                  <div class="row">
+                    <div class="col-sm-6 border-end">Unit</div>
+                    <div class="col-sm-6">305-168</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 border-end">Street</div>
+                    <div class="col-sm-6">Charlotte Street</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 border-end">City</div>
+                    <div class="col-sm-6">Ottawa</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 border-end">Province</div>
+                    <div class="col-sm-6">ON (Ontario)</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 border-end">Postal Code</div>
+                    <div class="col-sm-6">K1N 8K6</div>
+                  </div>
+                  <div class="row mt-2">
+                    <div class="col d-flex gap-2 w-100">
+                      <a
+                        class="
+                          text-decoration-none
+                          btn btn-outline-danger
+                          d-flex
+                          justify-content-center
+                          gap-2
+                          w-100
+                        "
+                        href="https://g.page/ocphysio?share"
+                        target="_blank"
+                      >
+                        <i class="bi-map"></i>
+                        <div>View In Google Maps</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-sm d-flex align-items-center justify-content-center"
+            >
+              <div class="card" style="width: 18rem">
+                <div class="card-header text-center">Clinic Hours</div>
+                <div class="card-body text-center container">
+                  <div class="row">
+                    <div class="col-6 border-end">Monday</div>
+                    <div class="col-6">8am - 7pm</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 border-end">Tuesday</div>
+                    <div class="col-6">8am - 7pm</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 border-end">Wednesday</div>
+                    <div class="col-6">8am - 7pm</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 border-end">Thursday</div>
+                    <div class="col-6">8am - 7pm</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 border-end">Friday</div>
+                    <div class="col-6">8am - 7pm</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 border-end">Saturday</div>
+                    <div class="col-6">Closed</div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 border-end">Sunday</div>
+                    <div class="col-6">Closed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section
+        class="border-bottom border-start border-end mt-3"
+        id="appointment"
+      >
+        <div
+          class="
+            banner
+            d-flex
+            justify-content-between
+            p-3
+            border-top border-start border-end border-danger
+            bg-light
+          "
+        >
+          <div class="d-flex align-items-center gap-2 fs-5 fw-bold">
+            <div>Appointments</div>
+          </div>
+        </div>
+        <div class="container pt-1 pb-1">
+          <div class="row pb-1 mb-2 gap-2">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">Appointment Information</div>
+                <div class="container mt-2">
+                  <div class="row mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-danger dropdown-toggle"
+                          type="button"
+                          id="dropdownService"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Select Services
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownService"
+                        >
+                          <li
+                            class="dropdown-item dd-service pe-auto"
+                            onclick="selectService(this.id)"
+                            id="acupunctureService"
+                          >
+                            Acupuncture
+                          </li>
+                          <li
+                            class="dropdown-item dd-service pe-auto"
+                            onclick="selectService(this.id)"
+                            id="inversionService"
+                          >
+                            Inversion Therapy
+                          </li>
+                          <li
+                            class="dropdown-item dd-service pe-auto"
+                            onclick="selectService(this.id)"
+                            id="massageService"
+                          >
+                            Massage and Soft Tissue Therapy
+                          </li>
+                          <li
+                            class="dropdown-item dd-service pe-auto"
+                            onclick="selectService(this.id)"
+                            id="vibrationService"
+                          >
+                            Whole Body Vibration Therapy
+                          </li>
+                          <li
+                            class="dropdown-item dd-service pe-auto"
+                            onclick="selectService(this.id)"
+                            id="electroService"
+                          >
+                            Electrotherapy
+                          </li>
+                          <li
+                            class="dropdown-item dd-service pe-auto"
+                            onclick="selectService(this.id)"
+                            id="cuppingService"
+                          >
+                            Cupping
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-danger dropdown-toggle"
+                          type="button"
+                          id="dropdownMonth"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Month
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownMonth"
+                        >
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-1"
+                          >
+                            January
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-2"
+                          >
+                            February
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-3"
+                          >
+                            March
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-4"
+                          >
+                            April
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-5"
+                          >
+                            May
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-6"
+                          >
+                            June
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-7"
+                          >
+                            July
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-8"
+                          >
+                            August
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-9"
+                          >
+                            September
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-10"
+                          >
+                            October
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-11"
+                          >
+                            November
+                          </li>
+                          <li
+                            class="dropdown-item month pe-auto"
+                            onclick="selectMonth(this.id)"
+                            id="month-12"
+                          >
+                            December
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="dropdown dropup">
+                        <button
+                          class="btn btn-danger dropdown-toggle"
+                          type="button"
+                          id="dropdownDay"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Day
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          id="dropdowndayUL"
+                          aria-labelledby="dropdownDay"
+                        >
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-1"
+                          >
+                            1
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-2"
+                          >
+                            2
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-3"
+                          >
+                            3
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-4"
+                          >
+                            4
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-5"
+                          >
+                            5
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-6"
+                          >
+                            6
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-7"
+                          >
+                            7
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-8"
+                          >
+                            8
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-9"
+                          >
+                            9
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-10"
+                          >
+                            10
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-11"
+                          >
+                            11
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-12"
+                          >
+                            12
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-13"
+                          >
+                            13
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-14"
+                          >
+                            14
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-15"
+                          >
+                            15
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-16"
+                          >
+                            16
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-17"
+                          >
+                            17
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-18"
+                          >
+                            18
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-19"
+                          >
+                            19
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-20"
+                          >
+                            20
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-21"
+                          >
+                            21
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-22"
+                          >
+                            22
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-23"
+                          >
+                            23
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-24"
+                          >
+                            24
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-25"
+                          >
+                            25
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-26"
+                          >
+                            26
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-27"
+                          >
+                            27
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-28"
+                          >
+                            28
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-29"
+                          >
+                            29
+                          </li>
+                          <li
+                            class="dropdown-item day pe-auto"
+                            onclick="selectDay(this.id)"
+                            id="day-30"
+                          >
+                            30
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-danger dropdown-toggle"
+                          type="button"
+                          id="dropdownYear"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Year
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownYear"
+                        >
+                          <li
+                            class="dropdown-item year pe-auto"
+                            onclick="selectYear(this.id)"
+                            id="year-2021"
+                          >
+                            2021
+                          </li>
+                          <li
+                            class="dropdown-item year pe-auto"
+                            onclick="selectYear(this.id)"
+                            id="year-2023"
+                          >
+                            2022
+                          </li>
+                          <li
+                            class="dropdown-item year pe-auto"
+                            onclick="selectYear(this.id)"
+                            id="year-2023"
+                          >
+                            2023
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="dropdown">
+                        <button
+                          class="btn btn-danger dropdown-toggle"
+                          type="button"
+                          id="dropdownTime"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Time
+                        </button>
+                        <ul
+                          class="dropdown-menu"
+                          aria-labelledby="dropdownTime"
+                        >
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-8"
+                          >
+                            8:00 am
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-9"
+                          >
+                            9:00 am
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-10"
+                          >
+                            10:00 am
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-11"
+                          >
+                            11:00 am
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-12"
+                          >
+                            12:00 am
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-1"
+                          >
+                            1:00 pm
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-2"
+                          >
+                            2:00 pm
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-3"
+                          >
+                            3:00 pm
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-4"
+                          >
+                            4:00 pm
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-5"
+                          >
+                            5:00 pm
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-6"
+                          >
+                            6:00 pm
+                          </li>
+                          <li
+                            class="dropdown-item time pe-auto"
+                            onclick="selectTime(this.id)"
+                            id="time-7"
+                          >
+                            7:00 pm
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">Contact Information</div>
+                <div class="container mt-2">
+                  <div class="row pb-1 mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingName"
+                        />
+                        <label for="floatingName">Contact Name</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pb-1 mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingEmail"
+                        />
+                        <label for="floatingEmail">Contact Email</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row pb-1 mb-2">
+                    <div class="col d-flex justify-content-center">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="floatingPhone"
+                        />
+                        <label for="floatingPhone">Contact Phone</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row pb-1 mb-2">
+            <div class="col d-flex justify-content-center gap-5">
+              <div class="btn btn-success" onclick="submitAppointment()">
+                Submit
+              </div>
+              <div class="btn btn-outline-secondary" onclick="reset()">
+                Reset
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <div id="snackbar">Appointment successfully created</div>
+
+    <!-- Appointment Modal -->
+    <div
+      class="modal fade"
+      id="appointmentModal"
+      tabindex="-1"
+      aria-labelledby="appointmentModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="d-flex justify-content-between gap-2">
+              <h5 class="modal-title" id="modalLabel">
+                Create your appointment
+              </h5>
+              <div class="d-flex align-items-center">
+                <i
+                  class="bi bi-question-circle"
+                  data-bs-toggle="tooltip"
+                  data-bs-placement="top"
+                  title="There is currenly no validation on these forms"
+                ></i>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="btn btn-close"
+              data-bs-dismiss="modal"
+              aria-labelledby="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div
+              class="
+                stepper-view
+                d-flex
+                justify-content-center
+                align-items-center
+              "
+            >
+              <div
+                class="d-flex flex-column align-items-center view"
+                id="appointmentInfo"
+              >
+                <div
+                  class="
+                    bg-danger
+                    text-white
+                    view-count
+                    border border-danger border-2
+                    fw-bold
+                    fs-6
+                  "
+                >
+                  1
+                </div>
+                <div class="text-center">Appointment Information</div>
+              </div>
+              <hr class="w-100" />
+              <div
+                class="
+                  d-flex
+                  flex-column
+                  justify-content-center
+                  align-items-center
+                  view
+                "
+                id="paymentInfo"
+              >
+                <div
+                  class="
+                    view-count
+                    border border-secondary border-2
+                    fw-bold
+                    fs-6
+                  "
+                >
+                  2
+                </div>
+                <div class="text-center">Payment Information</div>
+              </div>
+              <hr class="w-100" />
+              <div
+                class="
+                  d-flex
+                  flex-column
+                  justify-content-center
+                  align-items-center
+                  view
+                "
+                id="checkoutInfo"
+              >
+                <div
+                  class="
+                    view-count
+                    border border-secondary border-2
+                    fw-bold
+                    fs-6
+                  "
+                >
+                  3
+                </div>
+                <div class="text-center">Confirm Checkout</div>
+              </div>
+            </div>
+            <div class="stepper-body mb-3">
+              <div id="appointmentSection" class="active-view">
+                <div class="input-group mb-3 mt-3">
+                  <select class="form-select" id="serviceSelect">
+                    <option selected>Choose a Service...</option>
+                    <option value="1">Acupuncture</option>
+                    <option value="2">Inversion Therapy</option>
+                    <option value="3">Massage and Soft Tissue Therapy</option>
+                    <option value="4">Whole Body Vibration Therapy</option>
+                    <option value="5">Electrotherapy</option>
+                    <option value="6">Cupping</option>
+                  </select>
+                  <select class="form-select" id="expertSelect">
+                    <option selected>Choose a Expert</option>
+                    <option value="1">Kevin Cox</option>
+                    <option value="2">Ted Neal</option>
+                    <option value="3">Alexa Turner</option>
+                    <option value="4">Nellie Murphy</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <select class="form-select" id="daySelect">
+                    <option selected>Day</option>
+                  </select>
+                  <select class="form-select" id="MonthSelect">
+                    <option selected>Month</option>
+                  </select>
+                  <select class="form-select" id="YearSelect">
+                    <option selected>Year</option>
+                    <option value="2021">2021</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                  </select>
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-text">First and Last Name</div>
+                  <input
+                    type="text"
+                    aria-label="First Name"
+                    class="form-control"
+                  />
+                  <input
+                    type="text"
+                    aria-label="Last Name"
+                    class="form-control"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-text">Contact Email</div>
+                  <input type="text" aria-label="Email" class="form-control" />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-text">Contact Phone</div>
+                  <input
+                    type="text"
+                    pattern="[0-9]{10}"
+                    aria-label="Email"
+                    class="form-control"
+                  />
+                </div>
+              </div>
+              <div id="paymentSection" class="inactive-view">
+                <div class="credit-card">
+                  <!-- Visa Mastercard American Express -->
+                  <div class="d-flex flex-row justify-content-around">
+                    <img id="visa-card" src="images/visa-mono.svg" alt="Visa Unselected" width="50" height="50"/>
+                    <img id="master-card" src="images/mastercard-mono.svg" alt="MasterCard Unselected" width="50" height="50"/>
+                    <img id="amex" src="images/amex-mono.svg" alt="Amex Unselected" width="50" height="50"/>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 w-100" id="card-input">
+                    <img id="gen-card" src="./images/gen-card.svg" alt="Generic Card" width="75" height="75">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Card Number" />
+                      <input type="text" class="form-control" placeholder="Exp #" /> 
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center gap-3 w-100" id="cvv">
+                    <img id="code-card" src="./images/code.svg" alt="Cvv2" width="75" height="75" />
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="CVV2" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="confirmedSection" class="inactive-view">
+                Confirmed Checkout
+              </div>
+            </div>
+            <div class="stepper-validation alert alert-secondary">
+              Validation Erros will go here
+            </div>
+          </div>
+          <div class="modal-footer stepper-options">
+            <button type="button" class="btn btn-secondary" id="wizBack">
+              Back
+            </button>
+            <button type="button" class="btn btn-primary" id="wizNext">
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="alert alert-info">
+      <div>Website designed by 'Some Unknown Creator'</div>
+    </footer>
+
+    <script src="health.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
