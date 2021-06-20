@@ -533,631 +533,6 @@
           </div>
         </div>
       </section>
-      <!-- <section
-        class="border-bottom border-start border-end mt-3"
-        id="appointment"
-      >
-        <div
-          class="
-            banner
-            d-flex
-            justify-content-between
-            p-3
-            border-top border-start border-end border-danger
-            bg-light
-          "
-        >
-          <div class="d-flex align-items-center gap-2 fs-5 fw-bold">
-            <div>Appointments</div>
-          </div>
-        </div>
-        <div class="container pt-1 pb-1">
-          <div class="row pb-1 mb-2 gap-2">
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-header">Appointment Information</div>
-                <div class="container mt-2">
-                  <div class="row mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-danger dropdown-toggle"
-                          type="button"
-                          id="dropdownService"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          Select Services
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownService"
-                        >
-                          <li
-                            class="dropdown-item dd-service pe-auto"
-                            onclick="selectService(this.id)"
-                            id="acupunctureService"
-                          >
-                            Acupuncture
-                          </li>
-                          <li
-                            class="dropdown-item dd-service pe-auto"
-                            onclick="selectService(this.id)"
-                            id="inversionService"
-                          >
-                            Inversion Therapy
-                          </li>
-                          <li
-                            class="dropdown-item dd-service pe-auto"
-                            onclick="selectService(this.id)"
-                            id="massageService"
-                          >
-                            Massage and Soft Tissue Therapy
-                          </li>
-                          <li
-                            class="dropdown-item dd-service pe-auto"
-                            onclick="selectService(this.id)"
-                            id="vibrationService"
-                          >
-                            Whole Body Vibration Therapy
-                          </li>
-                          <li
-                            class="dropdown-item dd-service pe-auto"
-                            onclick="selectService(this.id)"
-                            id="electroService"
-                          >
-                            Electrotherapy
-                          </li>
-                          <li
-                            class="dropdown-item dd-service pe-auto"
-                            onclick="selectService(this.id)"
-                            id="cuppingService"
-                          >
-                            Cupping
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-danger dropdown-toggle"
-                          type="button"
-                          id="dropdownMonth"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          Month
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownMonth"
-                        >
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-1"
-                          >
-                            January
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-2"
-                          >
-                            February
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-3"
-                          >
-                            March
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-4"
-                          >
-                            April
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-5"
-                          >
-                            May
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-6"
-                          >
-                            June
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-7"
-                          >
-                            July
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-8"
-                          >
-                            August
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-9"
-                          >
-                            September
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-10"
-                          >
-                            October
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-11"
-                          >
-                            November
-                          </li>
-                          <li
-                            class="dropdown-item month pe-auto"
-                            onclick="selectMonth(this.id)"
-                            id="month-12"
-                          >
-                            December
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="dropdown dropup">
-                        <button
-                          class="btn btn-danger dropdown-toggle"
-                          type="button"
-                          id="dropdownDay"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          Day
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          id="dropdowndayUL"
-                          aria-labelledby="dropdownDay"
-                        >
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-1"
-                          >
-                            1
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-2"
-                          >
-                            2
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-3"
-                          >
-                            3
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-4"
-                          >
-                            4
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-5"
-                          >
-                            5
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-6"
-                          >
-                            6
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-7"
-                          >
-                            7
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-8"
-                          >
-                            8
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-9"
-                          >
-                            9
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-10"
-                          >
-                            10
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-11"
-                          >
-                            11
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-12"
-                          >
-                            12
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-13"
-                          >
-                            13
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-14"
-                          >
-                            14
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-15"
-                          >
-                            15
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-16"
-                          >
-                            16
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-17"
-                          >
-                            17
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-18"
-                          >
-                            18
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-19"
-                          >
-                            19
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-20"
-                          >
-                            20
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-21"
-                          >
-                            21
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-22"
-                          >
-                            22
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-23"
-                          >
-                            23
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-24"
-                          >
-                            24
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-25"
-                          >
-                            25
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-26"
-                          >
-                            26
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-27"
-                          >
-                            27
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-28"
-                          >
-                            28
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-29"
-                          >
-                            29
-                          </li>
-                          <li
-                            class="dropdown-item day pe-auto"
-                            onclick="selectDay(this.id)"
-                            id="day-30"
-                          >
-                            30
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-danger dropdown-toggle"
-                          type="button"
-                          id="dropdownYear"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          Year
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownYear"
-                        >
-                          <li
-                            class="dropdown-item year pe-auto"
-                            onclick="selectYear(this.id)"
-                            id="year-2021"
-                          >
-                            2021
-                          </li>
-                          <li
-                            class="dropdown-item year pe-auto"
-                            onclick="selectYear(this.id)"
-                            id="year-2023"
-                          >
-                            2022
-                          </li>
-                          <li
-                            class="dropdown-item year pe-auto"
-                            onclick="selectYear(this.id)"
-                            id="year-2023"
-                          >
-                            2023
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="dropdown">
-                        <button
-                          class="btn btn-danger dropdown-toggle"
-                          type="button"
-                          id="dropdownTime"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                        >
-                          Time
-                        </button>
-                        <ul
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownTime"
-                        >
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-8"
-                          >
-                            8:00 am
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-9"
-                          >
-                            9:00 am
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-10"
-                          >
-                            10:00 am
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-11"
-                          >
-                            11:00 am
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-12"
-                          >
-                            12:00 am
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-1"
-                          >
-                            1:00 pm
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-2"
-                          >
-                            2:00 pm
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-3"
-                          >
-                            3:00 pm
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-4"
-                          >
-                            4:00 pm
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-5"
-                          >
-                            5:00 pm
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-6"
-                          >
-                            6:00 pm
-                          </li>
-                          <li
-                            class="dropdown-item time pe-auto"
-                            onclick="selectTime(this.id)"
-                            id="time-7"
-                          >
-                            7:00 pm
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-header">Contact Information</div>
-                <div class="container mt-2">
-                  <div class="row pb-1 mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingName"
-                        />
-                        <label for="floatingName">Contact Name</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row pb-1 mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingEmail"
-                        />
-                        <label for="floatingEmail">Contact Email</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row pb-1 mb-2">
-                    <div class="col d-flex justify-content-center">
-                      <div class="form-floating mb-3">
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="floatingPhone"
-                        />
-                        <label for="floatingPhone">Contact Phone</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row pb-1 mb-2">
-            <div class="col d-flex justify-content-center gap-5">
-              <div class="btn btn-success" onclick="submitAppointment()">
-                Submit
-              </div>
-              <div class="btn btn-outline-secondary" onclick="reset()">
-                Reset
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
     </main>
 
     <div id="snackbar">Appointment successfully created</div>
@@ -1332,21 +707,66 @@
                 <div class="credit-card">
                   <!-- Visa Mastercard American Express -->
                   <div class="d-flex flex-row justify-content-around">
-                    <img id="visa-card" src="images/visa-mono.svg" alt="Visa Unselected" width="50" height="50"/>
-                    <img id="master-card" src="images/mastercard-mono.svg" alt="MasterCard Unselected" width="50" height="50"/>
-                    <img id="amex" src="images/amex-mono.svg" alt="Amex Unselected" width="50" height="50"/>
+                    <img
+                      id="visa-card"
+                      src="images/visa-mono.svg"
+                      alt="Visa Unselected"
+                      width="50"
+                      height="50"
+                    />
+                    <img
+                      id="master-card"
+                      src="images/mastercard-mono.svg"
+                      alt="MasterCard Unselected"
+                      width="50"
+                      height="50"
+                    />
+                    <img
+                      id="amex"
+                      src="images/amex-mono.svg"
+                      alt="Amex Unselected"
+                      width="50"
+                      height="50"
+                    />
                   </div>
-                  <div class="d-flex align-items-center gap-3 w-100" id="card-input">
-                    <img id="gen-card" src="./images/gen-card.svg" alt="Generic Card" width="75" height="75">
+                  <div
+                    class="d-flex align-items-center gap-3 w-100"
+                    id="card-input"
+                  >
+                    <img
+                      id="gen-card"
+                      src="./images/gen-card.svg"
+                      alt="Generic Card"
+                      width="75"
+                      height="75"
+                    />
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Card Number" />
-                      <input type="text" class="form-control" placeholder="Exp #" /> 
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Card Number"
+                      />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Exp #"
+                      />
                     </div>
                   </div>
                   <div class="d-flex align-items-center gap-3 w-100" id="cvv">
-                    <img id="code-card" src="./images/code.svg" alt="Cvv2" width="75" height="75" />
+                    <img
+                      id="code-card"
+                      src="./images/code.svg"
+                      alt="Cvv2"
+                      width="75"
+                      height="75"
+                    />
                     <div class="input-group">
-                      <input type="text" class="form-control" placeholder="CVV2" />
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="CVV2"
+                      />
                     </div>
                   </div>
                 </div>
