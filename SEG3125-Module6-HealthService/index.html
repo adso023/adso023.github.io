@@ -542,8 +542,8 @@
       class="modal fade"
       id="appointmentModal"
       tabindex="-1"
-      data-bs-backdrop="static",
-      data-bs-keyboard="false",
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
       aria-labelledby="appointmentModal"
       aria-hidden="true"
     >
@@ -554,14 +554,6 @@
               <h5 class="modal-title" id="modalLabel">
                 Create your appointment
               </h5>
-              <div class="d-flex align-items-center">
-                <i
-                  class="bi bi-question-circle"
-                  data-bs-toggle="tooltip"
-                  data-bs-placement="top"
-                  title="There is currenly no validation on these forms"
-                ></i>
-              </div>
             </div>
             <button
               type="button"
@@ -585,10 +577,10 @@
               >
                 <div
                   class="
-                    bg-danger
+                    bg-success
                     text-white
                     view-count
-                    border border-danger border-2
+                    border border-success border-2
                     fw-bold
                     fs-6
                   "
@@ -646,73 +638,123 @@
             </div>
             <div class="stepper-body mb-3">
               <div id="appointmentSection" class="active-view">
-                <div class="input-group mb-3 mt-3">
-                  <select class="form-select" id="serviceSelect">
-                    <option selected>Choose a Service...</option>
-                    <option value="1">Acupuncture</option>
-                    <option value="2">Inversion Therapy</option>
-                    <option value="3">Massage and Soft Tissue Therapy</option>
-                    <option value="4">Whole Body Vibration Therapy</option>
-                    <option value="5">Electrotherapy</option>
-                    <option value="6">Cupping</option>
-                  </select>
-                  <select class="form-select" id="expertSelect">
-                    <option selected>Choose a Expert</option>
-                    <option value="1">Kevin Cox</option>
-                    <option value="2">Ted Neal</option>
-                    <option value="3">Alexa Turner</option>
-                    <option value="4">Nellie Murphy</option>
-                  </select>
+                <div class="col-md-4">
+                  <div
+                    id="oneContainer"
+                    class="d-flex p-0 m-0 justify-content-between text-danger"
+                  >
+                    <div id="serviceError" class="d-none">
+                      Choose a valid service
+                    </div>
+                    <div id="expertError" class="d-none">
+                      Choose a valid expert
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <select class="form-select" id="serviceSelect">
+                      <option selected>Choose a Service...</option>
+                      <option value="1">Acupuncture</option>
+                      <option value="2">Inversion Therapy</option>
+                      <option value="3">Massage and Soft Tissue Therapy</option>
+                      <option value="4">Whole Body Vibration Therapy</option>
+                      <option value="5">Electrotherapy</option>
+                      <option value="6">Cupping</option>
+                    </select>
+                    <select class="form-select" id="expertSelect">
+                      <option selected>Choose a Expert</option>
+                      <option value="1">Kevin Cox</option>
+                      <option value="2">Ted Neal</option>
+                      <option value="3">Alexa Turner</option>
+                      <option value="4">Nellie Murphy</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="input-group mb-3">
-                  <label class="input-group-text">Date</label>
-                  <select class="form-select" id="daySelect">
-                    <option selected>Day</option>
-                  </select>
-                  <select class="form-select" id="MonthSelect">
-                    <option selected>Month</option>
-                  </select>
-                  <select class="form-select" id="YearSelect">
-                    <option selected>Year</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                  </select>
+                <div class="col-md-4">
+                  <div id="twoContainer" class="p-0 m-0 text-danger">
+                    <div id="dateError" class="d-none"></div>
+                  </div>
+                  <div class="input-group mb-3" id="dateTime">
+                    <label class="input-group-text">Date</label>
+                    <select class="form-select" id="daySelect">
+                      <option selected>Day</option>
+                    </select>
+                    <select class="form-select" id="MonthSelect">
+                      <option selected>Month</option>
+                    </select>
+                    <select class="form-select" id="YearSelect">
+                      <option selected>Year</option>
+                      <option value="2021">2021</option>
+                      <option value="2022">2022</option>
+                      <option value="2023">2023</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="input-group mb-3">
-                  <label class="input-group-text">Time</label>
-                  <select class="form-select" id="timeSelect">
-                    <option selected>Choose Time</option>
-                  </select>
+                <div class="col-md-4">
+                  <div id="timeError" class="d-none text-danger">
+                    Choose a valid time slot
+                  </div>
+                  <div class="input-group mb-3">
+                    <label class="input-group-text">Time</label>
+                    <select class="form-select" id="timeSelect">
+                      <option selected>Choose Time</option>
+                    </select>
+                  </div>
                 </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-text">First and Last Name</div>
-                  <input
-                    type="text"
-                    aria-label="First Name"
-                    class="form-control"
-                    id="first"
-                  />
-                  <input
-                    type="text"
-                    aria-label="Last Name"
-                    class="form-control"
-                    id="last"
-                  />
+                <div class="col-md-4">
+                  <div
+                    id="threeContainer"
+                    class="d-flex p-0 m-0 justify-content-between text-danger"
+                  >
+                    <div id="fnameError" class="d-none">First Name Missing</div>
+                    <div id="lnameError" class="d-none">Last Name Missing</div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">First and Last Name</div>
+                    <input
+                      type="text"
+                      aria-label="First Name"
+                      class="form-control"
+                      id="first"
+                    />
+                    <input
+                      type="text"
+                      aria-label="Last Name"
+                      class="form-control"
+                      id="last"
+                    />
+                  </div>
                 </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-text">Contact Email</div>
-                  <input type="text" aria-label="Email" id="email" class="form-control" />
+                <div class="col-md-4">
+                  <div id="fourContainer" class="text-danger">
+                    <div id="emailError" class="d-none">Invalid Email</div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">Contact Email</div>
+                    <input
+                      type="text"
+                      aria-label="Email"
+                      id="email"
+                      class="form-control"
+                      placeholder="username@domain.com"
+                    />
+                  </div>
                 </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-text">Contact Phone</div>
-                  <input
-                    type="text"
-                    pattern="[0-9]{10}"
-                    aria-label="Email"
-                    class="form-control"
-                    id="phone"
-                  />
+                <div class="col-md-4">
+                  <div id="fiveContainer" class="text-danger">
+                    <div id="phoneError" class="d-none">
+                      Invalid Phone Number: Format (111-111-1111)
+                    </div>
+                  </div>
+                  <div class="input-group mb-3">
+                    <div class="input-group-text">Contact Phone</div>
+                    <input
+                      type="text"
+                      aria-label="Phone"
+                      class="form-control"
+                      id="phone"
+                      placeholder="XXX-XXX-XXXX"
+                    />
+                  </div>
                 </div>
               </div>
               <div id="paymentSection" class="inactive-view">
@@ -741,70 +783,80 @@
                       height="50"
                     />
                   </div>
-                  <div
-                    class="d-flex align-items-center gap-3 w-100"
-                    id="card-input"
-                  >
-                    <img
-                      id="gen-card"
-                      src="./images/gen-card.svg"
-                      alt="Generic Card"
-                      width="75"
-                      height="75"
-                    />
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Card Number"
-                        id="cardNumber"
+                  <div class="alert alert-info p-1 mb-0" id="credit-card-alert">
+                    Select a card to enter information
+                  </div>
+                  <div class="col-md-4">
+                    <div
+                      id="cardContainer"
+                      class="d-flex justify-content-between p-0 m-0 text-danger"
+                    >
+                      <div class="d-none" id="creditcard-error">
+                        Invalid Credit Card
+                      </div>
+                      <div class="d-none" id="expnum-error">
+                        Invalid Exp Number (MM/YY)
+                      </div>
+                    </div>
+                    <div
+                      class="d-flex align-items-center gap-3 w-100"
+                      id="card-input"
+                    >
+                      <img
+                        id="gen-card"
+                        src="./images/gen-card.svg"
+                        alt="Generic Card"
+                        width="75"
+                        height="75"
                       />
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="Exp #"
-                        id="cardExp"
-                      />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Card Number"
+                          id="cardNumber"
+                          disabled
+                        />
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Exp #"
+                          id="cardExp"
+                          disabled
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div class="d-flex align-items-center gap-3 w-100" id="cvv">
-                    <img
-                      id="code-card"
-                      src="./images/code.svg"
-                      alt="Cvv2"
-                      width="75"
-                      height="75"
-                    />
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        placeholder="CVV2"
-                        id="cardCvv"
+                  <div class="col-md-4">
+                    <div id="cvv-error" class="d-none text-danger">
+                      Invalid CVV Number
+                    </div>
+                    <div class="d-flex align-items-center gap-3 w-100" id="cvv">
+                      <img
+                        id="code-card"
+                        src="./images/code.svg"
+                        alt="Cvv2"
+                        width="75"
+                        height="75"
                       />
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="CVV2"
+                          id="cardCvv"
+                          disabled
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div id="confirmedSection" class="inactive-view">
-                <!-- <div class="d-flex justify-content-around">
-                  <div id="review">
-                    <div id="appointmentDetails">
-
-                    </div>
-                    <div id="paymentDetails">
-
-                    </div>
-                  </div>
-                  <div id="receipt">
-
-                  </div>
-                </div> -->
-                Not Implemented Yet
+                <div class="fs-6 fw-bold" id="checkout">
+                  Hit Submit Appointment to complete the process
+                </div>
               </div>
-            </div>
-            <div class="stepper-validation alert alert-secondary">
-              Validation Erros will go here
             </div>
           </div>
           <div class="modal-footer stepper-options">
