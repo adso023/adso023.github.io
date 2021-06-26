@@ -62,8 +62,8 @@
             "
           >
             <a class="text-decoration-none text-primary" href="#services"
-              >Services</a
-            >
+              >Services <i class="bi bi-gear"></i
+            ></a>
           </div>
           <div
             class="
@@ -77,13 +77,13 @@
             "
           >
             <a class="text-decoration-none text-dark" href="#experts"
-              >Experts</a
-            >
+              >Experts <i class="bi bi-people"></i
+            ></a>
           </div>
           <div class="d-flex align-items-center fw-bold pe-auto mx-2 pe-2">
             <a class="text-decoration-none text-danger" href="#about-us"
-              >About Us</a
-            >
+              >About Us <i class="bi bi-info-circle"></i
+            ></a>
           </div>
         </div>
       </nav>
@@ -95,23 +95,28 @@
       data-bs-target="navbar-nav"
       data-bs-offset="0"
     >
-      <section class="border-bottom border-start border-end" id="services">
-        <div
-          class="
-            banner
-            d-flex
-            justify-content-between
-            p-3
-            border-top border-start border-end border-primary
-            bg-light
-          "
-        >
+      <section
+        class="alert alert-danger alert-dismissible fade show"
+        role="alert"
+      >
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <strong>COVID-19 Notice</strong>: Limited the number of registrations
+        per day
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </section>
+      <section id="services">
+        <div class="banner d-flex justify-content-between p-3 bg-light">
           <div class="d-flex align-items-center fs-5 fw-bold">
             <div class="d-flex justify-content-between gap-2">
-              <div id="serviceHeading">Services</div>
+              <div id="serviceHeading" class="text-primary">Services</div>
               <div class="d-flex align-items-center">
                 <i
-                  class="bi bi-question-circle"
+                  class="bi bi-gear text-primary"
                   data-bs-toggle="tooltip"
                   data-bs-placement="top"
                   title="Click on the buttons for descriptions"
@@ -150,7 +155,7 @@
                 <div class="card-body">
                   <h5 class="card-title">
                     <div
-                      class="btn btn-outline-dark w-100"
+                      class="btn btn-outline-primary w-100 fw-bold"
                       role="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#service1"
@@ -180,7 +185,7 @@
                 <div class="card-body">
                   <h5 class="card-title">
                     <div
-                      class="btn btn-outline-dark w-100"
+                      class="btn btn-outline-primary w-100 fw-bold"
                       role="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#service2"
@@ -211,7 +216,7 @@
                 <div class="card-body">
                   <h5 class="card-title">
                     <div
-                      class="btn btn-outline-dark w-100"
+                      class="btn btn-outline-primary w-100 fw-bold"
                       role="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#service3"
@@ -242,7 +247,7 @@
                 <div class="card-body">
                   <h5 class="card-title">
                     <div
-                      class="btn btn-outline-dark w-100"
+                      class="btn btn-outline-primary w-100 fw-bold"
                       role="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#service4"
@@ -273,7 +278,7 @@
                 <div class="card-body">
                   <h5 class="card-title">
                     <div
-                      class="btn btn-outline-dark w-100"
+                      class="btn btn-outline-primary w-100 fw-bold"
                       role="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#service5"
@@ -304,7 +309,7 @@
                 <div class="card-body">
                   <h5 class="card-title">
                     <div
-                      class="btn btn-outline-dark w-100"
+                      class="btn btn-outline-primary w-100 fw-bold"
                       role="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#service6"
@@ -326,22 +331,13 @@
           </div>
         </div>
       </section>
-      <section class="border-bottom border-start border-end mt-3" id="experts">
-        <div
-          class="
-            banner
-            d-flex
-            justify-content-between
-            p-3
-            border-top border-start border-end border-dark
-            bg-light
-          "
-        >
+      <section class="mt-3" id="experts">
+        <div class="banner d-flex justify-content-between p-3 bg-light">
           <div class="d-flex align-items-center gap-2 fs-5 fw-bold">
             <div>Experts</div>
             <div class="d-flex align-items-center">
               <i
-                class="bi bi-question-circle"
+                class="bi bi-people"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 title="People and Images from randomuser.me and thispersondoesnotexist.com"
@@ -422,22 +418,13 @@
           </div>
         </div>
       </section>
-      <section class="border-bottom border-start border-end mt-3" id="about-us">
-        <div
-          class="
-            banner
-            d-flex
-            justify-content-between
-            p-3
-            border-top border-start border-end border-danger
-            bg-light
-          "
-        >
+      <section class="mt-3" id="about-us">
+        <div class="banner d-flex justify-content-between p-3 bg-light">
           <div class="d-flex align-items-center gap-2 fs-5 fw-bold">
-            <div>Clinic Information</div>
+            <div class="text-danger">Clinic Information</div>
             <div class="d-flex align-items-center">
               <i
-                class="bi bi-question-circle"
+                class="bi bi-info-circle text-danger"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 title="This site is not for the real clinic at this location"
@@ -449,7 +436,9 @@
           <div class="row row-cols-sm-1 row-cols-lg-2">
             <div class="col-sm d-flex justify-content-center">
               <div class="card h-100" style="width: 18rem">
-                <div class="card-header">Clinic Location</div>
+                <div class="card-header text-center">
+                  Clinic Location <i class="bi bi-geo-fill"></i>
+                </div>
                 <div class="card-body text-center container">
                   <div class="row">
                     <div class="col-sm-6 border-end">Unit</div>
@@ -497,7 +486,9 @@
               class="col-sm d-flex align-items-center justify-content-center"
             >
               <div class="card" style="width: 18rem">
-                <div class="card-header text-center">Clinic Hours</div>
+                <div class="card-header text-center">
+                  Clinic Hours <i class="bi bi-clock"></i>
+                </div>
                 <div class="card-body text-center container">
                   <div class="row">
                     <div class="col-6 border-end">Monday</div>

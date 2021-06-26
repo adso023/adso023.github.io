@@ -23,6 +23,14 @@ div.stepper-view {
   cursor: pointer !important;
 }
 
+#experts .card {
+  transition: all 0.3s ease-in-out;
+}
+
+#experts .card:hover {
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
 #snackbar {
   visibility: hidden;
   min-width: fit-content;
